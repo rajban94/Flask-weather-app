@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./static/weather_styles.css">
+</head>
+<body>
+
+    {% if data %}
+        <h2 class="header">Weather Data</h2>
+        <div class="weather-container">
+            <div class="weather-tile">
+                <div class="location-date-container">
+                    <h3>{{ data.city }}, {{ data.cnt }} |</h3>
+                    <h5> {{  data.datetime }}</h5>
+                </div>
+                <div class="icon-description-container">
+                    <img src="http://openweathermap.org/img/wn/{{ data.icon }}.png" alt="Weather Icon">
+                    <h3>{{ data.description }}</h3>
+                </div>
+                <p>Temperature: {{ data.temp }}°C</p>
+                <p>Feels Like: {{ data.feel }}°C</p>
+                <p>Humidity: {{ data.humidity }}%</p>
+                <p>Wind: {{ data.wind }}%</p>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- 5day forecast -->
+
+    <h2 class="header-day5">5-DAY FORECAST</h2>
+    <div class="five-day">
+        <section class="tile-container">
+            <div class="forecast-item">
+                <p class="forecast-item p"> {{five_day_dates_list[1]}} </p>
+                <div class="icon-description-container">
+                    <img src="http://openweathermap.org/img/wn/{{ five_day_weather_icon[1] }}.png" alt="Weather Icon">
+                    <h3>{{ five_day_weather_list[1] }}</h3>
+                </div>
+                <p class="forecast-item p"> {{five_day_temp_list[1]}}°C </p>
+            </div>
+
+            <div class="forecast-item">
+                <p class="forecast-item p"> {{five_day_dates_list[2]}} </p>
+                <div class="icon-description-container">
+                    <img src="http://openweathermap.org/img/wn/{{ five_day_weather_icon[2] }}.png" alt="Weather Icon">
+                    <h3>{{ five_day_weather_list[2] }}</h3>
+                </div>
+                <p class="forecast-item p"> {{five_day_temp_list[2]}}°C </p>
+            </div>
+
+            <div class="forecast-item">
+                <p class="forecast-item p"> {{five_day_dates_list[3]}} </p>
+                <div class="icon-description-container">
+                    <img src="http://openweathermap.org/img/wn/{{ five_day_weather_icon[3] }}.png" alt="Weather Icon">
+                    <h3>{{ five_day_weather_list[3] }}</h3>
+                </div>
+                <p class="forecast-item p"> {{five_day_temp_list[3]}}°C </p>
+            </div>
+
+            <div class="forecast-item">
+                <p class="forecast-item p"> {{five_day_dates_list[4]}} </p>
+                <div class="icon-description-container">
+                    <img src="http://openweathermap.org/img/wn/{{ five_day_weather_icon[4] }}.png" alt="Weather Icon">
+                    <h3>{{ five_day_weather_list[4] }}</h3>
+                </div>
+                <p class="forecast-item p"> {{five_day_temp_list[4]}}°C </p>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
