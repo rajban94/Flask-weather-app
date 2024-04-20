@@ -10,6 +10,22 @@
     z-index: 999;
 }
 
+/* SunRise and SunSet */
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.box {
+    width: 500px;
+    height: 500px;
+    border: solid 5px #000;
+    border-color: #007bff transparent transparent transparent;
+    border-radius: 75%/100px 100px 0 0;
+} */
+
 .weather-container {
     display: flex;
     justify-content: center;
@@ -133,7 +149,7 @@
 
 .five-day {
     display: grid;
-    grid-template-columns: 450px;
+    grid-template-columns: 600px;
     justify-content: center;
     align-items: center;
     margin-bottom: 1%;

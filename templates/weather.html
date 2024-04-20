@@ -10,6 +10,14 @@
 
     {% if data %}
         <h2 class="header">Weather Data</h2>
+
+        <!-- SunRise and SunSet -->
+        <!-- <div class="container">
+            <div class="box">
+                <h5> {{  data.sunrise }}</h5>
+            </div>
+        </div> -->
+    
         <div class="weather-container">
             <div class="weather-tile">
                 <div class="location-date-container">
@@ -33,6 +41,16 @@
     <h2 class="header-day5">5-DAY FORECAST</h2>
     <div class="five-day">
         <section class="tile-container">
+
+            <div class="forecast-item">
+                <p class="forecast-item p"> {{five_day_dates_list[0]}} </p>
+                <div class="icon-description-container">
+                    <img src="http://openweathermap.org/img/wn/{{ five_day_weather_icon[0] }}.png" alt="Weather Icon">
+                    <h3>{{ five_day_weather_list[0] }}</h3>
+                </div>
+                <p class="forecast-item p"> {{five_day_temp_list[0]}}°C </p>
+            </div>
+
             <div class="forecast-item">
                 <p class="forecast-item p"> {{five_day_dates_list[1]}} </p>
                 <div class="icon-description-container">
