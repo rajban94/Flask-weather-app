@@ -8,6 +8,14 @@
 </head>
 <body>
 
+    <nav>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active fancy-link" aria-current="page" href="/">Home</a>
+            </li>
+        </ul>
+    </nav>
+
     {% if data %}
         <h2 class="header">Weather Data</h2>
 
@@ -78,14 +86,14 @@
                 <p class="forecast-item p"> {{five_day_temp_list[3]}}°C </p>
             </div>
 
-            <div class="forecast-item">
+            <!-- <div class="forecast-item">
                 <p class="forecast-item p"> {{five_day_dates_list[4]}} </p>
                 <div class="icon-description-container">
                     <img src="http://openweathermap.org/img/wn/{{ five_day_weather_icon[4] }}.png" alt="Weather Icon">
                     <h3>{{ five_day_weather_list[4] }}</h3>
                 </div>
                 <p class="forecast-item p"> {{five_day_temp_list[4]}}°C </p>
-            </div>
+            </div> -->
         </section>
     </div>
 

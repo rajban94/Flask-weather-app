@@ -10,15 +10,15 @@
     <h2 class="header">Weather App</h2>
     <form action="/weather" method="post">
         <div class="input-container">
-            <label for="location">Location:</label><br>
-            <input type="text" id="location" name="location" placeholder="Enter location" required>
-        </div>
-        <div class="input-container">
-            <label for="apikey">API Key:</label><br>
-            <input type="text" id="apikey" name="apikey" placeholder="Enter API key" required>
-        </div>
-        <div class="input-container">
-            <button class="fancy-button">Get Weather</button>
+            <div class="input-tile">
+                <label for="location">Location:</label><br>
+                <input type="text" id="location" name="location" placeholder="Enter location" required>
+            
+                <label for="apikey">API Key:</label><br>
+                <input type="text" id="apikey" name="apikey" placeholder="Enter API key" required>
+        
+                <button class="fancy-button">Get Weather</button>
+            </div>
         </div>
     </form>
 </body>

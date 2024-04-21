@@ -21,13 +21,13 @@ def getForecast(forecastJson):
         five_day_temp_list.append(temp)
 
     five_day_weather_list = [item['weather'][0]['main'] for item in forecastJson['list']
-                                if '12:00:00' in item['dt_txt'] and item['dt_txt'].split(" ")[0] != str(datetime.now()).split(" ")[0]]
+                                if '00:00:00' in item['dt_txt'] and item['dt_txt'].split(" ")[0] != str(datetime.now()).split(" ")[0]]
 
     five_day_dates_list = [datetime.strptime(str(item['dt_txt']).split()[0], '%Y-%m-%d').strftime('%m/%d') for item in forecastJson['list'] 
-                        if '12:00:00' in item['dt_txt']and item['dt_txt'].split(" ")[0] != str(datetime.now()).split(" ")[0]]
+                        if '00:00:00' in item['dt_txt']and item['dt_txt'].split(" ")[0] != str(datetime.now()).split(" ")[0]]
 
     five_day_weather_icon = [item['weather'][0]['icon'] for item in forecastJson['list']
-                                if '12:00:00' in item['dt_txt'] and item['dt_txt'].split(" ")[0] != str(datetime.now()).split(" ")[0]]
+                                if '00:00:00' in item['dt_txt'] and item['dt_txt'].split(" ")[0] != str(datetime.now()).split(" ")[0]]
     
     return five_day_temp_list, five_day_weather_list, five_day_weather_icon, five_day_dates_list
 

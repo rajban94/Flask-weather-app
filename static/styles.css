@@ -13,8 +13,26 @@ body {
 }
 
 .input-container {
-    text-align: center;
-    margin-bottom: 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: calc(50vh - 50px);
+    margin-top: 50px;
+}
+
+.input-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    width: 220px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .input-container input[type="text"] {
@@ -26,6 +44,7 @@ body {
     outline: none;
     font-size: 16px;
     transition: border-bottom 0.3s ease;
+    margin-bottom: 20px;
 }
 
 .input-container input[type="text"]:focus {
@@ -41,6 +60,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 .fancy-button:hover {
